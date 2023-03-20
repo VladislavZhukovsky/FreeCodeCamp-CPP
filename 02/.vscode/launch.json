@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "D:/Vlad/Programming/Cpp/FreeCodeCamp/02",
-      "program": "D:/Vlad/Programming/Cpp/FreeCodeCamp/02/program.exe",
+      "cwd": "D:/Programming/Cpp/FreeCodeCamp/02",
+      "program": "D:/Programming/Cpp/FreeCodeCamp/02/program.exe",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

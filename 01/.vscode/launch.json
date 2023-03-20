@@ -12,7 +12,7 @@
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
-      "miDebuggerPath": "E:\\Program Files\\mingw64\\bin\\gdb.exe",
+      "miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
@@ -33,8 +33,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "e:/Vlad/Programming/Cpp",
-      "program": "e:/Vlad/Programming/Cpp/build/Debug/outDebug",
+      "cwd": "D:/Programming/Cpp",
+      "program": "D:/Programming/Cpp/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
