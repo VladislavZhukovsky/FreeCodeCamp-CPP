@@ -12,5 +12,7 @@ struct Point
 int main()
 {
     cout << "Hello World!" << endl;
-    cout << add(2,3);
+    cout << add(2,3) << "\n";
+    cin.get();
+    return 0;
 }
