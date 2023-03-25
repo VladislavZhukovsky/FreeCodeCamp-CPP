@@ -11,7 +11,7 @@
 				"-std=c++20",
 				"${file}",
 				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}-d.exe"
+				"${fileDirname}/${fileBasenameNoExtension}.exe"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
@@ -33,7 +33,6 @@
 				"${fileDirname}/*.cpp",
 				"-o",
 				"${fileDirname}/program.exe",
-				""
 			],
 			"options": {
 				"cwd": "C:/mingw64/bin"
