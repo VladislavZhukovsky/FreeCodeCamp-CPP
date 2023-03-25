@@ -1,3 +1,4 @@
+#include "funcs0.h"
 
 // int func1(int a, int b)
 // {

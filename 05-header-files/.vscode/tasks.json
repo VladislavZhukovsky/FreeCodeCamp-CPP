@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "C/C++: gcc.exe build all files - 05",
+			"label": "05 - build all files",
 			"command": "C:/mingw64/bin/g++.exe",
 			"args": [
 				"-fdiagnostics-color=always",
@@ -11,8 +11,7 @@
 				"-std=c++20",
 				"${fileDirname}\\*.cpp",
 				"-o",
-				"${fileDirname}\\program.exe",
-				""
+				"${fileDirname}\\program.exe"
 			],
 			"options": {
 				"cwd": "C:/mingw64/bin"
@@ -22,6 +21,27 @@
 			],
 			"group": "build",
 			"detail": "compiler: \"C:/mingw64/bin/g++.exe\""
+		},
+		{
+			"type": "cppbuild",
+			"label": "05 - get TU for active file",
+			"command": "C:/mingw64/bin/g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-std=c++20",
+				"-E",
+				"${file}",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}.ii",
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\mingw64\\bin\\g++.exe"
 		}
 	]
 }
