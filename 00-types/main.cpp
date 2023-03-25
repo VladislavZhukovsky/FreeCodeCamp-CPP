@@ -104,6 +104,15 @@ void m07_io_manipulators()
     //cout << std::flush;
 }
 
+void integer_types()
+{
+    cout << sizeof(int) << endl;
+    cout << sizeof(unsigned int) << endl;
+    cout << sizeof(long) << endl;
+    cout << sizeof(long long) << endl;
+    cout << sizeof(size_t) << endl; //depends on CPU
+}
+
 int main()
 {
     size_t x = 4;

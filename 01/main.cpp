@@ -4,15 +4,6 @@
 
 using namespace std;
 
-void integer_types()
-{
-    cout << sizeof(int) << endl;
-    cout << sizeof(unsigned int) << endl;
-    cout << sizeof(long) << endl;
-    cout << sizeof(long long) << endl;
-    cout << sizeof(size_t) << endl; //depends on CPU
-}
-
 void arrays()
 {
     // set size or initialize!!!!
@@ -309,6 +300,7 @@ void pass_by_reference(const int& a)
 
 int main()
 {
+    pointers_const();
     cout << "Hello World!" << endl;
     int a = 4;
     cout << a;
