@@ -48,7 +48,7 @@ void m02()
 
     cout << a;
     cout << &a;
-    cout << "\n";
+    cout << endl;
 
     pass_by_value(a);
     cout << a;
