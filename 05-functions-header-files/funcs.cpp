@@ -1,7 +1,13 @@
+//implementation
 
 int add(int a, int b)
 {
     return a + b;
+}
+
+int somefunc(int a, int b)
+{
+    return a - b;
 }
 
 struct Point
