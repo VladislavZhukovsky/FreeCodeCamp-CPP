@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "Build with GCC 11.3.0",
+			"label": "Build with GCC 11.3.0 - 00",
 			"command": "C:\\mingw64\\bin\\g++.exe",
 			"args": [
 				"-fdiagnostics-color=always",

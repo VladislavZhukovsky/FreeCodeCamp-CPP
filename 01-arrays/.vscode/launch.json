@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(gdb) Launch",
+      "name": "(gdb) Launch - 01",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/program.exe",
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "name": "C/C++ Runner: Debug Session",
+      "name": "C/C++ Runner: Debug Session - 01",
       "type": "cppdbg",
       "request": "launch",
       "args": [],

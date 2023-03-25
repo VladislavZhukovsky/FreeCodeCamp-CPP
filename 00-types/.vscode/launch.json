@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "g++.exe - Build and debug",
+            "name": "g++.exe - Build and debug - 00",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}\\program.exe",
