@@ -65,11 +65,6 @@ void const_refs_and_ptrs()
     cout << ref3 << endl;
 }
 
-void pass_by_reference(const int& a)
-{
-    cout << a;
-}
-
 int main()
 {
 }
