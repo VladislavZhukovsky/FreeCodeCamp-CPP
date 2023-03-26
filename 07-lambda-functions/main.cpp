@@ -73,24 +73,68 @@ void m05_nested_lambda()
 {
     int x {10}; //assume x has 0x1 address here
     cout << "SCOPE: x address:  " << &x << endl; //showing 0x1 for x address
-    auto show = [](const int& y)
+    auto show = [](int y)
     {
         cout << "SHOW: parameter address: " << &y << endl; 
     };
     cout << "SCOPE: show-lambda address: " << &show << endl;
     show(x); // showing 0x2 for x address
+    ++x;
+    show(x);
     auto fv = [ x, show]()
     {
         cout << "FV  : x address: " << &x << " " << endl; //0x3
         cout << "FV  : show-lambda address:" << &show << endl;
         show(x); // showing 0x4 for x address
+        show(x);
     };
     auto fr = [&x, show]()
     { 
         cout << "FR  : x address: " << &x << " " << endl; //showing 0x1 for x address
         cout << "FR  : show-lambda address:" << &show << endl;
         show(x); //showing 0x4 for x address - WHY???
-        //ANSWER: seems like it is 'by chance'. I understand the flow and allocation right
+        //ANSWER: as lambda's body compiled into one place, program goes to one and only block of memory
+        //that's why passed parameter is put to same address
+    };
+    fv();
+    fr();
+}
+
+void m05_nested_lambda_class()
+{
+    struct __showFunctor
+    {
+        auto operator()(int y){ cout << "SHOW: parameter address: " << &y << endl;  }
+    };
+
+    __showFunctor showFunctor;
+
+    int x {10}; //assume x has 0x1 address here
+    int a {11}; int b {12};
+    cout << &a << " " << &b << endl;
+    showFunctor(a);
+    showFunctor(b);
+    cout << "SCOPE: x address:  " << &x << endl; //showing 0x1 for x address
+
+    cout << "SCOPE: functor address: " << &showFunctor << endl;
+    cout << "SCOPE: ";
+    showFunctor(x); // showing 0x2 for x address
+    auto fv = [ x]()
+    {
+        __showFunctor sfv;
+        cout << "\t" << "FV  : captured x address: " << &x << " " << endl; //0x3
+        cout << "\t" << "FV  : show-functor address:" << &sfv << endl;
+        cout << "\t" << "FV  : ";
+        sfv(x); // showing 0x4 for x address
+    };
+    auto fr = [&x]()
+    { 
+        __showFunctor sfr;
+        cout << "\t" << "FR  : captured x address: " << &x << " " << endl; //showing 0x1 for x address
+        cout << "\t" << "FR  : show-functor address:" << &sfr << endl;
+        cout << "\t" << "FR  : ";
+        sfr(x); // showing 0x4 for x address - same as inside FV
+
     };
     fv();
     fr();
@@ -110,5 +154,5 @@ void m05_capture_all()
 
 int main(int argc, char **argv)
 {
-    m05_nested_lambda();
+    m05_nested_lambda_class();
 }
