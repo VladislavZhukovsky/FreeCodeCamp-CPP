@@ -72,6 +72,7 @@ void m04_capture_by_ref()
 void m05_nested_lambda()
 {
     int x {10}; //assume x has 0x1 address here
+    int s {9};
     cout << "SCOPE: x address:  " << &x << endl; //showing 0x1 for x address
     auto show = [](int y)
     {
@@ -86,13 +87,12 @@ void m05_nested_lambda()
         cout << "FV  : x address: " << &x << " " << endl; //0x3
         cout << "FV  : show-lambda address:" << &show << endl;
         show(x); // showing 0x4 for x address
-        show(x);
     };
-    auto fr = [&x, show]()
+    auto fr = [&s, show]()
     { 
-        cout << "FR  : x address: " << &x << " " << endl; //showing 0x1 for x address
+        cout << "FR  : x address: " << &s << " " << endl; //showing 0x1 for x address
         cout << "FR  : show-lambda address:" << &show << endl;
-        show(x); //showing 0x4 for x address - WHY???
+        show(s); //showing 0x4 for x address - WHY???
         //ANSWER: as lambda's body compiled into one place, program goes to one and only block of memory
         //that's why passed parameter is put to same address
     };
@@ -154,5 +154,5 @@ void m05_capture_all()
 
 int main(int argc, char **argv)
 {
-    m05_nested_lambda_class();
+    m05_nested_lambda();
 }
