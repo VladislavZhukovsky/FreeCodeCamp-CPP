@@ -46,7 +46,7 @@ void strings04()
     cout << "s1: " << s1 << endl;
     cout << "s2: " << s2 << endl;
     cout << "s1 adress: " << &s1 << endl;
-    auto res = strcpy(s1, s2);
+    auto res = strcpy(s1, s2); //strcpy is dangerous
     cout << s1 << endl;
     cout << s2 << endl;
     cout << *res << endl;
@@ -77,4 +77,5 @@ void strings06()
 
 int main()
 {
+    strings05std();
 }
