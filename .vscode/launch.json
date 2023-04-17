@@ -15,7 +15,7 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",
+            "miDebuggerPath": "D:\\Program Files\\mingw64\\bin\\gdb.exe",
             "preLaunchTask": "Custom - C/C++ - gcc.exe - build all files",
             "setupCommands": [
                 {

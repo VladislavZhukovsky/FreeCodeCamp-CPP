@@ -143,16 +143,13 @@ void m05_nested_lambda_class()
 void m05_capture_all()
 {
     int x {10};
-    auto f1 = [=](){ cout << x; };
-    auto f2 = [&](){ cout << x; };
+    auto f1 = [x](){ cout << &x << endl; };
+    auto f2 = [x](){ cout << &x << endl; };
     f1();
-    f2();
-    ++x;
     f1();
-    f2();
 }
 
 int main(int argc, char **argv)
 {
-    m05_nested_lambda();
+    m05_capture_all();
 }
